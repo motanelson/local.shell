@@ -45,6 +45,9 @@ HTML_RESULT = """
 
 @app.route("/", methods=["GET"])
 def index():
+    # Verifica se vem do localhost
+    if request.remote_addr != "127.0.0.1":
+        return "Acesso negado: apenas localhost pode executar comandos.", 403
     return HTML_FORM
 
 @app.route(str(num1), methods=["POST"])
