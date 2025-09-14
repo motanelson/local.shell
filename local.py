@@ -17,14 +17,13 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'  # ou 'Strict' se preferires
 # --- HTML templates simples ---
 HTML_SETUP = """
 <!doctype html>
-<body style="background-color: yellow; color: black; font-family: monospace;>
 <title>Configurar Utilizador</title>
 <h2>Primeiro arranque — cria uma conta</h2>
 <form method="post">
   Username: <input name="username"><br>
   Password: <input name="password" type="password"><br>
   <button type="submit">Criar conta</button>
-</body>
+
 </form>
 """
 
